@@ -22,7 +22,7 @@ Just add it to `app.json` definition, like:
  "environments": {
     "test": {
       "buildpacks": [
-        { "url":  "https://github.com/Sinka13/heroku-buildpack-ci-postgis" },
+        { "url":  "https://github.com/solosciences/configs/heroku-buildpack-ci-postgis" },
         { "url": "heroku/nodejs"},
         { "url": "heroku/ruby" }
       ],
