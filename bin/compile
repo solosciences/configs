@@ -17,15 +17,15 @@ BUILDPACK_DIR="$(dirname $(dirname $0))"
 
 # config
 POSTGIS_VERSION=3.0.1
-POSTGIS_DOWNLOAD_URL="https://sharedreqlibs.s3.us-east-2.amazonaws.com/postgis.tar.gz"
-POSTGIS_DEPENDENCIES_DOWNLOAD_URL="https://sharedreqlibs.s3.us-east-2.amazonaws.com/postgis-dependencies.tar.gz"
+POSTGIS_DOWNLOAD_URL="https://github.com/solosciences/configs/raw/master/postgis.tar.gz"
+POSTGIS_DEPENDENCIES_DOWNLOAD_URL="https://github.com/solosciences/configs/raw/master/postgis-dependencies.tar.gz"
 
 echo "-----> Downloading postgis"
 
 cd $BUILD_DIR
 
-curl $POSTGIS_DOWNLOAD_URL -s -o - | tar xzf -
-curl $POSTGIS_DEPENDENCIES_DOWNLOAD_URL -s -o - | tar xzf -
+curl -sL $POSTGIS_DOWNLOAD_URL -s -o - | tar xzf -
+curl -sL $POSTGIS_DEPENDENCIES_DOWNLOAD_URL -s -o - | tar xzf -
 
 echo "-----> postgis downloaded"
 echo "-----> installing postgis"
